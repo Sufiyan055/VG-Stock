@@ -117,7 +117,7 @@ class VideoGallery {
       const item = document.createElement("div");
       item.classList.add("item");
       item.innerHTML = `
-        <a href="${video.video_files[2].link}" target="_blank">
+        <a href="#" target="_blank">
             <video src="${video.video_files[1].link}" controls muted width="300"></video>
         </a>
         `;
