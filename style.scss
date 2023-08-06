@@ -1,0 +1,315 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@mixin flexmenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin searchFormBar {
+  border: 1px solid #000;
+  width: 40%;
+  height: 30px;
+  overflow: hidden;
+  border-radius: 50px;
+  position: relative;
+}
+@mixin searchInput {
+  width: 100%;
+  height: 100%;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+}
+@mixin saerchIconV {
+  position: absolute;
+  top: 5px;
+  right: 7px;
+  font-size: 1.1rem;
+  color: gray;
+}
+.headerMain {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background: #fff;
+  box-shadow: 0px 0px 10px #000;
+  .navbar {
+    @include flexmenu();
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
+    .headh1 {
+      text-decoration: none;
+      color: #000;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+    .searchForm {
+      @include searchFormBar();
+      display: none;
+      transition: 1s ease-in-out;
+      input {
+        @include searchInput();
+      }
+      .searchIcon {
+        @include saerchIconV();
+      }
+    }
+    .searchIconTo {
+      position: absolute;
+      right: 205px;
+      font-size: 1.3rem;
+      font-weight: 600;
+      border-radius: 50px;
+      padding: 5px;
+      background-color: #000;
+      color: lightskyblue;
+      display: none;
+    }
+    ul {
+      @include flexmenu();
+      li {
+        list-style: none;
+        margin: 2px 10px;
+        a {
+          text-decoration: none;
+          color: #000;
+          font-family: sans-serif;
+          padding: 2px 25px;
+          position: relative;
+          span {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+/* Bg Image */
+
+.bgImgNSearch {
+  height: 30rem;
+  background: linear-gradient(45deg, #00000037, #0000004a),
+    url(images/bgvgm.webp);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  @include flexmenu();
+  position: relative;
+  .glowText {
+    position: absolute;
+    top: 100px;
+    position: relative;
+    font-size: 3em;
+    color: #222;
+    &::before {
+      content: attr(data-text);
+      position: absolute;
+      color: #fff;
+      width: 350px;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 4px solid #fff;
+      animation: animate 8s linear infinite;
+      filter: drop-shadow(0 0 30px #fff) drop-shadow(0 0 50px #fff);
+      @keyframes animate {
+        0%,
+        10%,
+        100% {
+          width: 0;
+        }
+        70%,
+        90% {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .searchForm {
+    @include searchFormBar();
+    position: absolute;
+    height: 40px;
+    top: 250px;
+    input {
+      @include searchInput();
+    }
+    .searchIcon {
+      @include saerchIconV();
+      right: 15px;
+      font-size: 1.5rem;
+    }
+  }
+}
+/* Button For direct search */
+.btnMain {
+  display: flex;
+  margin: 10px 20px;
+  @include flexmenu();
+  flex-wrap: wrap;
+  button {
+    margin: 2px 10px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    border: 1px solid #000;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px #000;
+    transition: box-shadow 0.2s ease-in-out;
+    &:hover {
+      box-shadow: 0px 0px 3px #000;
+    }
+  }
+}
+/* Gallery */
+.mainGallery {
+  text-align: center;
+  margin: 15px 5px;
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+    padding: 20px;
+    justify-content: center;
+    .item {
+      border: 1px solid #000;
+      height: 350px;
+      @include flexmenu();
+      box-shadow: 0px 0px 4px #000;
+      border-radius: 15px;
+      overflow: hidden;
+      padding: 10px;
+      transition: box-shadow 0.2s ease-in-out;
+      &:hover {
+        box-shadow: 0px 0px 1px #000;
+      }
+      img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
+  }
+  /* Load More btn */
+  .load-more {
+    padding: 5px 10px;
+    border: 1px solid #000;
+    margin: 15px;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease-in-out;
+    &:hover {
+      box-shadow: 0px 0px 2px #000;
+    }
+  }
+}
+/* Media Query */
+@media screen and (max-width: 678px) {
+  .headerMain {
+    .navbar {
+      ul {
+        li {
+          margin: 0px 12px;
+          a {
+            padding: 2px;
+            b {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 564px) {
+  .headerMain {
+    .navbar {
+      .headh1 {
+        font-size: 0.5rem;
+      }
+      .searchForm {
+        width: 60%;
+        height: 22px;
+        .searchIcon {
+          top: 0px;
+        }
+      }
+      ul {
+        padding: 0px 25px;
+        li {
+          a {
+            padding: 2px;
+            span {
+              font-size: 1.2rem;
+              top: 3px;
+              right: 5px;
+            }
+            b {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .bgImgNSearch {
+    .glowText {
+      font-size: 1.5rem;
+      &::before {
+        width: 280px;
+      }
+    }
+    .searchForm {
+      width: 70%;
+    }
+  }
+}
+@media screen and (max-width: 481px) {
+  .headerMain {
+    .navbar {
+      .searchForm {
+        width: 40%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 430px) {
+  .mainGallery {
+    .gallery {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      .item {
+        height: 250px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 386px) {
+  .mainGallery {
+    .gallery {
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      .item {
+        height: 160px;
+        padding: 5px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 361px) {
+  .headerMain {
+    .navbar {
+      .searchForm {
+        .searchIcon {
+          font-size: 0.7rem;
+          top: 5px;
+        }
+        input::placeholder {
+          font-size: 0.6rem;
+        }
+      }
+    }
+  }
+}
