@@ -97,7 +97,7 @@ class PhotoGallery {
     const baseURL = `https://api.pexels.com/v1/search?query=images&page=${index}&per_page=12`;
     const data = await this.fetchImages(baseURL);
     this.GenerateHTML(data.photos);
-    console.log(data);
+    //console.log(data);
   }
   //fetch function is created here
   async fetchImages(baseURL) {
@@ -117,7 +117,7 @@ class PhotoGallery {
       const item = document.createElement("div");
       item.classList.add("item");
       item.innerHTML = `
-          <a href="#" target="_blank">
+          <a href="${photo.url}" target="_blank">
           <img src="${photo.src.medium}" alt="Image">
           </a>
           `;

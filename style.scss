@@ -201,8 +201,22 @@
       overflow: hidden;
       padding: 10px;
       transition: box-shadow 0.2s ease-in-out;
+      position: relative;
       &:hover {
         box-shadow: 0px 0px 1px #000;
+      }
+      .VideoMain {
+        .viewIt {
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          color: #fff;
+          background-color: #000;
+          box-shadow: 0px 0px 4px gray;
+          text-decoration: none;
+          padding: 1px 3px;
+          border-radius: 50px;
+        }
       }
       img {
         width: 100%;
@@ -226,6 +240,7 @@
     transition: box-shadow 0.2s ease-in-out;
     font-family: sans-serif;
     border-radius: 15px;
+    user-select: none;
     &:hover {
       box-shadow: 0px 0px 4px #000;
       background: linear-gradient(45deg, orange, yellow);
@@ -312,6 +327,13 @@
         video {
           width: 90%;
           height: 220px;
+        }
+        .VideoMain {
+          .viewIt {
+            span {
+              font-size: 1.1rem;
+            }
+          }
         }
       }
     }

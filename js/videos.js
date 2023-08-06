@@ -109,7 +109,7 @@ class VideoGallery {
       },
     });
     const data = await response.json();
-    //console.log(data);
+    console.log(data);
     return data;
   }
   GenerateHTML(videos) {
@@ -117,9 +117,12 @@ class VideoGallery {
       const item = document.createElement("div");
       item.classList.add("item");
       item.innerHTML = `
-        <a href="#" target="_blank">
+        <div class="VideoMain">
             <video src="${video.video_files[1].link}" controls muted width="300"></video>
-        </a>
+            <a class="viewIt" href="${video.url}" target="_blank">
+            <span class="material-symbols-outlined">open_in_new</span>
+            </a>
+        </div>
         `;
       this.galleryDiv.appendChild(item);
     });

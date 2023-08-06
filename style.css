@@ -212,9 +212,21 @@
   overflow: hidden;
   padding: 10px;
   transition: box-shadow 0.2s ease-in-out;
+  position: relative;
 }
 .mainGallery .gallery .item:hover {
   box-shadow: 0px 0px 1px #000;
+}
+.mainGallery .gallery .item .VideoMain .viewIt {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #fff;
+  background-color: #000;
+  box-shadow: 0px 0px 4px gray;
+  text-decoration: none;
+  padding: 1px 3px;
+  border-radius: 50px;
 }
 .mainGallery .gallery .item img {
   width: 100%;
@@ -237,6 +249,9 @@
   transition: box-shadow 0.2s ease-in-out;
   font-family: sans-serif;
   border-radius: 15px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .mainGallery .load-more:hover {
   box-shadow: 0px 0px 4px #000;
@@ -306,6 +321,9 @@
   .mainGallery .gallery .item video {
     width: 90%;
     height: 220px;
+  }
+  .mainGallery .gallery .item .VideoMain .viewIt span {
+    font-size: 1.1rem;
   }
 }
 @media screen and (max-width: 386px) {
