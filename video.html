@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <title>Pexels Api Images fetching</title>
+  </head>
+  <body>
+    <header class="headerMain">
+      <nav class="navbar">
+        <a class="headh1" href="#"
+          ><h1><b>VG</b> <span>Stock</span></h1></a
+        >
+        <form id="searchFormId" class="searchForm" action="">
+          <input type="text" placeholder="search images" />
+          <span class="material-symbols-outlined searchIcon"> search </span>
+        </form>
+        <span class="material-symbols-outlined searchIconTo"> search </span>
+        <ul>
+          <li>
+            <a href="index.html"
+              ><span class="material-symbols-outlined cameraIcon">
+                photo_camera
+              </span>
+              <b> Images</b></a
+            >
+          </li>
+          <li>
+            <a href="video.html"
+              ><span class="material-symbols-outlined videoIcon">
+                videocam
+              </span>
+              <b>Videos</b>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- bg part -->
+    <div class="bgImgNSearch">
+      <p class="glowText" data-text="Free vgm with High Quality">
+        Free vgm with High Quality
+      </p>
+      <form class="searchForm searchformto" action="">
+        <input type="text" placeholder="search images" />
+        <span class="material-symbols-outlined searchIcon"> search </span>
+      </form>
+    </div>
+    <!-- btn for direct result without search-->
+    <div class="btnMain">
+      <button class="natureBtn" data-nature="nature">Nature</button>
+      <button class="animalBtn" data-nature="animal">Animal</button>
+      <button class="peopleBtn" data-nature="people">People</button>
+      <button class="foodBtn" data-nature="food">Food</button>
+      <button class="carBtn" data-nature="car">car</button>
+      <button class="houseBtn" data-nature="car">House</button>
+      <button class="travelBtn" data-nature="car">Travel</button>
+    </div>
+    <!-- Images display here -->
+    <div class="mainGallery">
+      <div class="gallery"></div>
+      <a class="load-more" data-vid="popular">Load More</a>
+    </div>
+
+    <script src="js/videos.js"></script>
+  </body>
+</html>
