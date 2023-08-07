@@ -97,7 +97,7 @@ class VideoGallery {
     const baseURL = `https://api.pexels.com/videos/popular?page=${index}&per_page=10`;
     const data = await this.fetchVideos(baseURL);
     this.GenerateHTML(data.videos);
-    //console.log(data);
+    console.log(data);
   }
   //fetch function is created here
   async fetchVideos(baseURL) {
