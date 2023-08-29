@@ -16,6 +16,14 @@ const scrollForm = () => {
 };
 /*  */
 
+let enterInput = document.querySelector(".mainGallery");
+
+enterInput.addEventListener("keypress", (es) => {
+  if (es.key === "Enter") {
+    es.preventDefault();
+  }
+});
+
 //OOP is using here
 class VideoGallery {
   constructor() {
