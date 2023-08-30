@@ -19,6 +19,7 @@
   justify-content: space-between;
   padding: 10px 20px;
   position: relative;
+  min-height: 50px;
 }
 .headerMain .navbar .headh1 {
   text-decoration: none;
@@ -333,6 +334,9 @@
 
 /* Media Query */
 @media screen and (max-width: 678px) {
+  .headerMain .navbar {
+    min-height: 50px;
+  }
   .headerMain .navbar ul li {
     margin: 0px 12px;
   }
@@ -355,7 +359,7 @@
     top: 0px;
   }
   .headerMain .navbar ul {
-    padding: 0px 25px;
+    padding: 0px 15px;
   }
   .headerMain .navbar ul li a {
     padding: 2px;
@@ -383,7 +387,7 @@
 }
 @media screen and (max-width: 481px) {
   .headerMain .navbar .searchForm {
-    width: 40%;
+    width: 50%;
   }
 }
 @media screen and (max-width: 430px) {

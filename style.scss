@@ -42,6 +42,7 @@
     justify-content: space-between;
     padding: 10px 20px;
     position: relative;
+    min-height: 50px;
     .headh1 {
       text-decoration: none;
       color: #000;
@@ -310,6 +311,7 @@
 @media screen and (max-width: 678px) {
   .headerMain {
     .navbar {
+      min-height: 50px;
       ul {
         li {
           margin: 0px 12px;
@@ -338,7 +340,7 @@
         }
       }
       ul {
-        padding: 0px 25px;
+        padding: 0px 15px;
         li {
           a {
             padding: 2px;
@@ -372,7 +374,7 @@
   .headerMain {
     .navbar {
       .searchForm {
-        width: 40%;
+        width: 50%;
       }
     }
   }
