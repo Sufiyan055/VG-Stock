@@ -1,7 +1,9 @@
 const searchFormId = document.getElementById("searchFormId");
+const gotoTop = document.querySelector(".gotoTop");
 /* SearchBar display when scroll */
 window.onscroll = () => {
   scrollForm();
+  scrollTopBtn();
 };
 
 const scrollForm = () => {
@@ -15,6 +17,20 @@ const scrollForm = () => {
   }
 };
 /*  */
+/* Go to Top */
+
+const scrollTopBtn = () => {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    gotoTop.style.display = "block";
+  } else {
+    gotoTop.style.display = "none";
+  }
+};
+
+const BacktoTop = () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+};
 
 let enterInput = document.querySelector(".mainGallery");
 
