@@ -5,4 +5,4 @@ VG Stock is a website project inspired by renowned platforms like Pexels and Uns
 
 VG Stock's magic is powered by the Pexels API, which seamlessly retrieves a wealth of high-quality images and videos to grace your screen.
 
-HTML, SASS, Javascript are used to make this project.
+HTML, SASS, and Javascript are used to make this project.
